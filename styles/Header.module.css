@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.left{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.right{
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.right span:nth-child(1){
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.right span:nth-child(2){
+    margin-left: 8px;
+    border-left: 1px solid rgb(198, 198, 198);
+    padding-left: 8px;
+    cursor: pointer;
+}
