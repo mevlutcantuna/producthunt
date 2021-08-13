@@ -4,6 +4,7 @@
     border-bottom: 1px #eeeeee solid;
     display: flex;
     cursor: pointer;
+    min-width: 350px;
 }
 
 .container:hover{
@@ -63,6 +64,7 @@
 
 .commentCount span{
     margin-right: 4px;
+    min-width: 15px;
 }
 
 .usedFor{
@@ -90,6 +92,23 @@
     padding: 0 8px;
     width: 64px;
     height: 74px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.vote:focus {
+    background-color: white;
+    border: 1px solid #F17F5E;
+    color: #F17F5E;
+}
+
+.vote:focus div{
+    color: #F17F5E;
+    background-image: url("https://ph-static.imgix.net/upvote-burst-orange-black.png?auto=compress&format=auto") ;
+    background-position: -336px 0;
+    animation-name: voteButtonAnimation;
+    animation-duration: 0.6s;
+    animation-timing-function: steps(24);
 }
 
 .vote div{
@@ -99,7 +118,18 @@
     background-repeat: no-repeat;
     background-size: 351px 15px;
     background-image: url("https://ph-static.imgix.net/upvote-burst-white.png?auto=compress&format=auto");
+
 }
+
+@keyframes voteButtonAnimation {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -336px 0;
+    }
+}
+
 
 .vote span{
     line-height: 20px;
@@ -109,4 +139,12 @@
 
 .vote:hover{
     background-color: #efefef;
+}
+
+@media only screen and (max-width: 600px)   {
+    .vote{
+        border: 0;
+        border-left: 1px solid rgb(232,232,232);
+        margin-left: 0.5rem;
+    }
 }

@@ -3,15 +3,20 @@ import commentIcon from "../assets/comment.svg";
 import Image from "next/image";
 
 function Card({ item }) {
+  const myLoader = ({ src, width, quality }) => {
+    return `https://picsum.photos/${src}?w=${width}&?q=${quality || 75}`;
+  };
 
-  const myLoader = ({src,width,quality}) => {
-    return `https://picsum.photos/${src}?w=${width}&?q=${quality || 75}`
-  }
- 
   return (
     <div className={styles.container}>
       <div className={styles.poster}>
-        <Image loader={myLoader} src={item.poster} alt="poster" height={12} width={12} />
+        <Image
+          loader={myLoader}
+          src={item.poster}
+          alt="poster"
+          height={12}
+          width={12}
+        />
       </div>
       <div className={styles.info}>
         <div className={styles.title}>{item.title}</div>
@@ -30,10 +35,10 @@ function Card({ item }) {
           </div>
         </div>
       </div>
-      <div className={styles.vote}>
+      <button className={styles.vote}>
         <div />
         <span>{item.vote}</span>
-      </div>
+      </button>
     </div>
   );
 }
