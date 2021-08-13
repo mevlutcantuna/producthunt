@@ -62,6 +62,10 @@
     cursor: pointer;
 }
 
+.commentCount:hover{
+    background-color: #eeeeee;
+}
+
 .commentCount span{
     margin-right: 4px;
     min-width: 15px;
