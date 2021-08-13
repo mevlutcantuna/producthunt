@@ -10,6 +10,10 @@
     background-color: #F9F9F9;
 }
 
+.poster{
+    margin-right: 1rem;
+}
+
 .poster img{
     width: 80px;
     height: 80px;
